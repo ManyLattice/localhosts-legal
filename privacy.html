@@ -37,17 +37,21 @@
 
     <h2>How the App Works</h2>
     <ul>
-        <li>For each site you add, Localhosts runs the command you entered in the folder you chose, and shows the output of that command in its log window.</li>
-        <li>To show whether a site is running, the app checks on your Mac which local ports are in use and which processes listen on them (process ID, name and working folder). This information is read on your Mac and is not stored or sent anywhere.</li>
+        <li>For each site you add, Localhosts runs the command you saved in the folder you chose, or serves the files with its built-in server, and shows the output in its log window.</li>
+        <li>When you choose a folder or an HTML file, or add a server that is already running, the app looks at its folder on your Mac (file names, package.json, server.py) to suggest a start command and port. Nothing from these files is stored, except the command and port you save.</li>
+        <li>To show whether a site is running, the app checks on your Mac which local ports are in use and which processes listen on them (process ID, name, working folder and command line). It uses this to show dev servers already running from your home folder, which you can add as sites. This information is read on your Mac and is not sent anywhere.</li>
         <li>When you open a site, the app asks your default browser to open its local address, such as http://name.localhost:8080. When you show a site's folder, it opens Finder.</li>
+        <li>For a folder of HTML files or a single HTML file, the app can serve the files itself. This built-in server listens only on your Mac (127.0.0.1), so other devices cannot open it, and it does not connect to the internet.</li>
         <li>The app itself does not make network requests. The commands you run are your own programs: what they do, including any network access, is up to them and is not covered by this policy.</li>
     </ul>
 
     <h2>Information Stored on Your Mac</h2>
     <ul>
-        <li>The list of your sites: name, folder, command, port, address, whether the site starts with the app, when it was added, and the process ID of its last launch.</li>
-        <li>Your setting for what happens to running sites when you quit the app.</li>
+        <li>The list of your sites: name, folder or HTML file, command or the built-in server, port, address, whether the site starts with the app, when it was added, and the process ID of its last launch.</li>
+        <li>Your setting for what happens to running sites when you quit the app, and, if you chose to keep sites running, which built-in server sites were running, so they start again next time.</li>
+        <li>The port and folder of running servers you chose to hide from the list.</li>
         <li>If you turn on opening at login, macOS keeps this in its own list of login items, which you can change in System Settings.</li>
+        <li>Like other Mac apps, macOS may save which windows were open (such as a site you were editing) to restore them the next time you open the app.</li>
     </ul>
     <p>This information stays on your Mac, in the app's storage. We do not upload it and the app does not sync it to any cloud service. If backups are enabled, it may be included in your Time Machine or other backup, which is controlled by you. The log of command output is kept only in memory (the last 500 lines per site) and is cleared when you quit the app.</p>
 
