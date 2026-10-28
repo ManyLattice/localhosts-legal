@@ -27,31 +27,37 @@
 </head>
 <body>
     <h1>Localhosts Support</h1>
-    <p class="lead">Localhosts lives in the Mac menu bar and starts, stops and opens the local websites you run on your computer.</p>
+    <p class="lead">Localhosts lives in the Mac menu bar and starts, stops and opens the local websites you run on your computer. It comes in two editions: the Mac App Store edition, and the direct edition, if you bought Localhosts on this site or through BundleHunt.</p>
 
     <div class="contact">
-        <p><strong>Need help or found a bug?</strong> Email <a href="mailto:hakarim81@gmail.com">hakarim81@gmail.com</a>. Please include the app version, your macOS version, the site's command and port, and the last lines of its log.</p>
+        <p><strong>Need help or found a bug?</strong> Email <a href="mailto:hakarim81@gmail.com">hakarim81@gmail.com</a>. Please include the app version, where you got it (Mac App Store or this site), your macOS version, the site's port, its command if it has one, and the last lines of its log.</p>
     </div>
 
     <h2>Frequently Asked Questions</h2>
 
     <h3>Where do I download the app?</h3>
-    <p>From the <a href="https://github.com/ManyLattice/localhosts-legal/releases/latest/download/Localhosts.dmg">download link</a>, which always gives the latest version. Open the DMG and drag Localhosts to Applications. The app requires macOS 26 or later.</p>
+    <p>Get Localhosts from the Mac App Store. If you bought the direct edition on this site or through BundleHunt, download the latest version from the main page of this site, open the DMG and drag Localhosts to Applications. The app requires macOS 26 or later.</p>
+
+    <h3>What is the difference between the editions?</h3>
+    <p>Both serve a site folder with the built-in server, with no Python or Terminal needed. The direct edition can also serve a single HTML file and run dev servers with their start command, such as npm run dev. It also shows servers already running on your Mac and which program holds a busy port. The Mac App Store edition runs in the macOS App Sandbox, so it does none of that.</p>
 
     <h3>I can't find the app after launching it.</h3>
     <p>Localhosts has no Dock icon. Look for its icon in the menu bar at the top right of the screen.</p>
 
     <h3>A site says its port is busy.</h3>
-    <p>Another program already listens on that port. Stop that program or choose another port for the site. If the program serves the site from its folder but was started elsewhere, Localhosts shows it as started elsewhere, and turning the site off stops that program.</p>
+    <p>Another program already listens on that port. Stop that program or choose another port for the site. In the direct edition, Localhosts shows which program holds the port, and if that program serves the site from its folder but was started elsewhere, it shows the site as started elsewhere: turning the site off then stops that program. The Mac App Store edition only tells you that the port is in use.</p>
 
     <h3>A site stops right after it starts.</h3>
-    <p>Open its log: it shows the output of the command and its exit code. Check that the command works in Terminal from the same folder.</p>
+    <p>Open its log: it shows what went wrong, such as a busy port. For a site with a command, the log shows the command's output and exit code: check that the command works in Terminal from the same folder.</p>
 
     <h3>How do I open the app at login?</h3>
-    <p>Turn on opening at login in the app's settings. You can also choose whether running sites stop or keep running when you quit the app.</p>
+    <p>Turn on opening at login in the app's settings. There you can also choose what happens to sites when you quit: in the direct edition, whether they stop or keep running; in the Mac App Store edition, whether they start again the next time the app opens.</p>
+
+    <h3>A site says its folder was not found.</h3>
+    <p>The folder or file was moved, renamed or deleted. Choose it again in the site's settings.</p>
 
     <h3>How do I get a refund?</h3>
-    <p>Localhosts is sold through BundleHunt. Refunds follow BundleHunt's policy: contact BundleHunt support with your order details.</p>
+    <p>If you bought Localhosts in the Mac App Store, request a refund from Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. If you bought it through BundleHunt, refunds follow BundleHunt's policy: contact BundleHunt support with your order details.</p>
 
     <h3>Does Localhosts send my data anywhere?</h3>
     <p>No. Your sites, commands and logs stay on your Mac, and the app does not connect to the internet. See the <a href="privacy.html">Privacy Policy</a>.</p>

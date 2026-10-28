@@ -16,6 +16,7 @@
         }
         h1 { font-size: 28px; margin-bottom: 8px; }
         h2 { font-size: 20px; margin-top: 32px; margin-bottom: 12px; }
+        h3 { font-size: 16px; margin-top: 20px; margin-bottom: 6px; }
         p, li { font-size: 15px; margin-bottom: 8px; }
         ul { padding-left: 20px; }
         .date { color: #888; font-size: 14px; margin-bottom: 32px; }
@@ -26,39 +27,53 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="date">Effective date: October 28, 2026</p>
+    <p class="date">Effective date: October 29, 2026</p>
 
     <h2>Introduction</h2>
-    <p>Mikhail Gudzikevich ("we", "our", "us") operates Localhosts, a menu bar app for Mac that starts, stops and opens the local websites you run on your computer. This Privacy Policy explains what information the app handles.</p>
+    <p>Mikhail Gudzikevich ("we", "our", "us") operates Localhosts, a menu bar app for Mac that runs and opens the local websites on your computer. Localhosts comes in two editions: the Mac App Store edition, and the direct edition, if you bought Localhosts on this site or through BundleHunt. This Privacy Policy explains what information each edition handles.</p>
 
     <div class="summary">
-        <p><strong>In short:</strong> everything stays on your Mac. Localhosts does not send anything to us or to anyone else, has no accounts, no ads and no analytics, and does not connect to the internet.</p>
+        <p><strong>In short:</strong> everything stays on your Mac. Neither edition sends anything to us or to anyone else. There are no accounts, no ads and no analytics, and the app does not connect to the internet.</p>
     </div>
 
     <h2>How the App Works</h2>
+    <h3>Both editions</h3>
     <ul>
-        <li>For each site you add, Localhosts runs the command you saved in the folder you chose, or serves the files with its built-in server, and shows the output in its log window.</li>
+        <li>For a site folder with HTML files, Localhosts serves the files itself (the direct edition can also serve a single HTML file). This built-in server listens only on your Mac (127.0.0.1), so other devices cannot open it, and it does not connect to the internet.</li>
+        <li>When you open a site, the app asks your default browser to open the site's address, such as http://name.localhost:8080. When you show a site's folder, it opens Finder.</li>
+        <li>The app itself does not connect to the internet. Its only connections are to local addresses on your Mac (127.0.0.1).</li>
+    </ul>
+
+    <h3>Mac App Store edition</h3>
+    <ul>
+        <li>The app runs in the macOS App Sandbox. Sites run only on the built-in server: the app serves only the site folders you choose, does not run commands and does not look at other programs or processes on your Mac.</li>
+        <li>To open a site's folder again later, the app keeps a macOS bookmark that gives it access only to the folder you chose.</li>
+        <li>To find a free port, the app checks on your Mac whether a port is already in use.</li>
+    </ul>
+
+    <h3>Direct edition</h3>
+    <ul>
+        <li>A site can also run the command you saved in the folder you chose. The app shows the output in its log window.</li>
         <li>When you choose a folder or an HTML file, or add a server that is already running, the app looks at its folder on your Mac (file names, package.json, server.py) to suggest a start command and port. Nothing from these files is stored, except the command and port you save.</li>
         <li>To show whether a site is running, the app checks on your Mac which local ports are in use and which processes listen on them (process ID, name, parent process, working folder and command line). It uses this to show dev servers already running from your home folder, which you can add as sites. This information is read on your Mac and is not sent anywhere.</li>
-        <li>When you open a site, the app asks your default browser to open its local address, such as http://name.localhost:8080. When you show a site's folder, it opens Finder.</li>
-        <li>For a folder of HTML files or a single HTML file, the app can serve the files itself. This built-in server listens only on your Mac (127.0.0.1), so other devices cannot open it, and it does not connect to the internet.</li>
-        <li>The app itself does not make network requests. The commands you run are your own programs: what they do, including any network access, is up to them and is not covered by this policy.</li>
+        <li>The commands you run are your own programs: what they do, including any network access, is up to them and is not covered by this policy.</li>
     </ul>
 
     <h2>Information Stored on Your Mac</h2>
     <ul>
-        <li>The list of your sites: name, folder or HTML file, command or the built-in server, port, address, whether the site starts with the app, when it was added, and the process ID of its last launch.</li>
-        <li>Your setting for what happens to running sites when you quit the app, and, if you chose to keep sites running, which built-in server sites were running, so they start again next time.</li>
-        <li>The port and folder of running servers you chose to hide from the list.</li>
+        <li>The list of your sites: name, folder or HTML file, port, address, whether the site starts with the app and when it was added. The direct edition also stores the site's command or that it uses the built-in server, and the process ID of its last launch. The App Store edition also stores the bookmark to the folder you chose.</li>
+        <li>Your setting for what happens to sites when you quit the app: in the direct edition, whether they stop or keep running; in the App Store edition, whether they start again next time. If built-in server sites are to start again, the app also keeps which of them were running when you quit.</li>
+        <li>In the direct edition, the port and folder of running servers you chose to hide from the list.</li>
         <li>If you turn on opening at login, macOS keeps this in its own list of login items, which you can change in System Settings.</li>
         <li>Like other Mac apps, macOS may save which windows were open (such as a site you were editing) to restore them the next time you open the app.</li>
     </ul>
-    <p>This information stays on your Mac, in the app's storage. We do not upload it and the app does not sync it to any cloud service. If backups are enabled, it may be included in your Time Machine or other backup, which is controlled by you. The log of command output is kept only in memory (the last 500 lines per site) and is cleared when you quit the app.</p>
+    <p>This information stays on your Mac, in the app's storage. We do not upload it and the app does not sync it to any cloud service. If backups are enabled, it may be included in your Time Machine or other backup, which is controlled by you. The log is kept only in memory (the last 500 lines per site) and is cleared when you quit the app.</p>
 
     <h2>Purchase and Download</h2>
     <ul>
-        <li>Localhosts is sold outside the Mac App Store, through BundleHunt. Your payment and the details you give at checkout are processed by BundleHunt and its payment providers under their own privacy policies. We do not receive your payment details.</li>
-        <li>The app is downloaded from GitHub, and these pages are hosted on GitHub Pages. Like any website, GitHub receives standard technical information when you open a page or download a file, such as your IP address and browser type, under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's Privacy Statement</a>.</li>
+        <li>The Mac App Store edition is bought and downloaded through Apple. Apple processes your payment under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>, and we do not receive your payment details. If you choose to share analytics with app developers in your Mac settings, Apple may give us anonymous crash reports and usage statistics.</li>
+        <li>If you bought the direct edition through BundleHunt, your payment and the details you give at checkout are processed by BundleHunt and its payment providers under their own privacy policies. We do not receive your payment details.</li>
+        <li>The direct edition is downloaded from GitHub, and these pages are hosted on GitHub Pages. Like any website, GitHub receives standard technical information when you open a page or download a file, such as your IP address and browser type, under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's Privacy Statement</a>.</li>
         <li>We receive information only if you choose to email us. We use your email only to answer you.</li>
     </ul>
 
@@ -72,7 +87,7 @@
     </ul>
 
     <h2>Sharing and Sale of Information</h2>
-    <p>We do not sell or share personal information. BundleHunt processes purchases and GitHub hosts our downloads and pages, as described above.</p>
+    <p>We do not sell or share personal information. Apple and BundleHunt process purchases, and GitHub hosts our downloads and pages, as described above.</p>
 
     <h2>Data Retention</h2>
     <ul>
